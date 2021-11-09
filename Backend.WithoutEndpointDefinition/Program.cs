@@ -1,4 +1,4 @@
-using Backend.Extensions;
+using Backend.WithoutEndpointDefinition.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,11 +7,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddEndpointDefinitions(typeof(Backend.IAssemblyMarker));
+builder.Services.AddCustomerServices();
 
 var app = builder.Build();
 
-app.UseEndpointDefinitions();
+app.MapCustomerEndpoints();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
 
