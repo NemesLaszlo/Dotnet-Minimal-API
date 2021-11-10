@@ -6,7 +6,9 @@ This repository contains a Minimal API (CRUD) with .NET 6 as a practise project.
 
 - .NET 6
 - Swagger
+- FluentValidation
 - FluentAssertions
+- Security with JSON Web Token
 - NSubstitute
 - XUnit
 
