@@ -12,10 +12,10 @@ This repository contains a Minimal API (CRUD) with .NET 6 as a practise project.
 
 ### Endpoints of the Backend
 
-| Entity   | Type   | URL             | Description             | Success     |
-| -------- | ------ | --------------- | ----------------------- | ----------- |
-| Customer | GET    | /customers      | Get all customers.      | 200 OK      |
-|          | GET    | /customers/{id} | Get customer by Id.     | 200 OK      |
-|          | POST   | /customers      | Create a customer.      | 201 CREATED |
-|          | PUT    | /customers/{id} | Update a customer by Id | 200 OK      |
-|          | DELETE | /customers/{id} | Delete a customer by Id | 200 OK      |
+| Entity   | Type   | URL             | Description             | Success     | Authorize |
+| -------- | ------ | --------------- | ----------------------- | ----------- | --------- |
+| Customer | GET    | /customers      | Get all customers.      | 200 OK      | No        |
+|          | GET    | /customers/{id} | Get customer by Id.     | 200 OK      | No        |
+|          | POST   | /customers      | Create a customer.      | 201 CREATED | No        |
+|          | PUT    | /customers/{id} | Update a customer by Id | 200 OK      | Yes       |
+|          | DELETE | /customers/{id} | Delete a customer by Id | 200 OK      | Yes       |
